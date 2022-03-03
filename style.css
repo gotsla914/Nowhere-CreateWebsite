@@ -1,0 +1,18 @@
+fieldset{
+    border: none;
+}
+
+.hidden{
+	overflow: hidden;
+	width: 0; height: 0; font-size: 0; line-height: 0;
+	text-indent: -9999px;
+}
+
+
+/* 임시!!! 시멘틱태그 짜임새 확인용! */
+
+* img {
+    width: 30%;
+}
+
+
