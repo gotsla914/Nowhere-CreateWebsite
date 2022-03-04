@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap" rel="stylesheet">
     <title>Nowhere. now here</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="common/reset.css">
     <script src="main.js" defer></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
     <style>
 
     </style>
@@ -17,9 +21,9 @@
 
 <body>
     <header>
-        <div class="navWrap">
+        <div class="topWrap">
             <div class="topLogo">
-                <h1><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
+                <h1><a href="index.html">NOWHERE</a></h1>
             </div>
         </div>
 
@@ -28,7 +32,7 @@
                 <nav class="navInner">
                     <ul>
                         <li><a href="#">NOWHERE</a>
-                            <ul>
+                            <ul class="menuSpacing">
                                 <li><a href="#">ALL</a></li>
                                 <li><a href="#">OUTWEAR</a></li>
                                 <li><a href="#">TOPS</a></li>
@@ -40,11 +44,11 @@
                         </li>
 
                         <li><a href="#">COLLECTION</a>
-                            <ul>
-                                <li><a href="#">21 F/W COLLECTION</a></li>
-                                <li><a href="#">21 SUMMER</a></li>
-                                <li><a href="#">20 WINTER</a></li>
-                                <li><a href="#">20 SPRING</a></li>
+                            <ul class="menuSpacing">
+                                <li><a href="#"><span class="numSize">21</span> F/W COLLECTION</a></li>
+                                <li><a href="#"><span class="numSize">21</span> SUMMER</a></li>
+                                <li><a href="#"><span class="numSize">20</span> WINTER</a></li>
+                                <li><a href="#"><span class="numSize">20</span> SPRING</a></li>
                             </ul>
                         </li>
 
@@ -52,8 +56,8 @@
 
                         <li><a href="#">STOCKIST</a></li>
 
-                        <li><a href="#">COMMUNITY</a>
-                            <ul>
+                        <li class="menu"><a href="#">COMMUNITY</a>
+                            <ul class="menuSpacing">
                                 <li><a href="#">NOTICE</a></li>
                                 <li><a href="#">REVIEW</a></li>
                                 <li><a href="#">Q&A</a></li>
@@ -65,31 +69,36 @@
         </div>
 
         <div class="userMenu">
-            <a href="#">
-                <form action="">
-                    <div class="searchBar hidden">____?</div>
+            <form action="">
+                <div class="search">
                     <fieldset>
                         <legend class="hidden">제품 검색</legend>
-                        <input type="search" class="srch" id="srch" maxlength="7">
-                        <span><i class="xi-search xi-2x"></i></span>
+                        <input type="text" id="srchBar" maxlength="9">
+                        <input type="submit" id="srchSubmit">
                     </fieldset>
-                </form>
-            </a>
+
+                </div>
+            </form>
             <a href="#">
-                <i class="xi-user-o"></i>
+                <i class="xi-search srchIcon"></i>
+            </a>
+
+            <a href="#">
+                <i class="xi-user-o loginIcon"></i>
                 <div>
-                    <span class="join">3000+</span>
+                    <span class="join">+3000P</span>
                 </div>
             </a>
-            <a href="#"><i class="xi-cart-o"></i></a>
+
+            <a href="#"><i class="xi-cart-o cart"></i></a>
         </div>
     </header>
 
     <main class="mainWrap">
         <div class="mainFirst">
             <ul>
-                <li><img src="img/12.jpg" alt="product01"></li>
-                <li><img src="img/13.jpg" alt="product02"></li>
+                <li><img src="common/img/12.jpg" alt="product01"></li>
+                <li><img src="common/img/13.jpg" alt="product02"></li>
             </ul>
         </div>
         <div class="mainSecond">
@@ -97,7 +106,7 @@
                 <div class="mainInner">
                     <ul>
                         <li class="thumbnail">
-                            <a href="#"><img src="img/12.jpg" alt="product02"></a>
+                            <a href="#"><img src="common/img/12.jpg" alt="product02"></a>
                             <div class="product">
                                 <span class="name">옷이다</span>
                                 <span class="description">하늘하늘 맥시코트</span>
@@ -126,13 +135,19 @@
                         <li><a href="#">PRIVACY POLICY</a></li>
                     </ul>
                 </div>
-                <div class="footBottom"><ul>
-                    <li><span> NOWHERE </span><span> nowhere@aaa.co.kr </span><span> 010-1111-1111 </span></li>
-                    <li><span> CEO. SEON </span><span> BUSINESS NO. 1234-45-1111 </span></li>
-                    <li><span> MAIL-ORDER NO. 2222-서울중구-11233 </span></li>
-                    <li><span> 20-7, SOSARO 30-GIL, JONGNO-GU, SEOUL, KOREA </span></li>
-                </ul></div>
-                <div class="sns"></div>
+                <div class="footBottom">
+                    <ul>
+                        <li><span> NOWHERE </span><span> nowhere@aaa.co.kr </span><span> 010-1111-1111 </span></li>
+                        <li><span> CEO. SEON </span><span> BUSINESS NO. 1234-45-1111 </span></li>
+                        <li><span> MAIL-ORDER NO. 2222-서울중구-11233 </span></li>
+                        <li><span> 20-7, SOSARO 30-GIL, JONGNO-GU, SEOUL, KOREA </span></li>
+                    </ul>
+                </div>
+                <ul class="sns">
+                    <li class="instagram"><a href="#"><i class="xi-instagram"></i></a>
+                    <li class="facebook"><a href="#"><i class="xi-facebook"></i></a>
+                    <li class="kakaotalk"><a href="#"><i class="xi-kakaotalk"></i></a></li>
+                </ul>
             </div>
         </div>
     </footer>
