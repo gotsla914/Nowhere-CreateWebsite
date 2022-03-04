@@ -4,13 +4,6 @@ html {
 	box-sizing: border-box;
 }
 
-
-
-
-fieldset {
-	border: none;
-}
-
 /* 임시!!! 시멘틱태그 짜임새 확인용! */
 
 * img {
@@ -34,6 +27,7 @@ fieldset {
 	font: 3rem/5rem 'Raleway', sans-serif;
 	text-align: center;
 }
+
 /* leftNav */
 .leftNav {
 	width: 240px;
@@ -47,40 +41,122 @@ fieldset {
 .leftNav>.layoutCenter>.navInner {
 	/* background-color: rgb(255, 255, 255); */
 	letter-spacing: 0.5px;
-	font: bold 0.8em 'Raleway','Lato','Noto Sans KR',sans-serif;
-	
+	font: bold 0.8em 'Raleway', 'Lato', 'Noto Sans KR', sans-serif;
+
 }
+
 /* leftNav - inner */
 .leftNav>.layoutCenter>.navInner>ul>li::before {
 	content: "!";
+	line-height: 1.5rem;
+
 }
+
 .leftNav>.layoutCenter>.navInner>ul>li>a {
 	line-height: 1rem;
 	color: black;
 	background-color: aqua;
 }
-.leftNav>.layoutCenter>.navInner .menuSpacing{
+
+.leftNav>.layoutCenter>.navInner .menuSpacing {
 	padding: 10px 0 23px 10px;
 }
+
 .leftNav>.layoutCenter>.navInner>ul>li>ul>li>a {
 	line-height: 1.5rem;
 	color: black;
 }
 
 .leftNav>.layoutCenter>.navInner .menuSpacing .numSize {
-	font: 600 0.9rem 'Raleway','Lato';
+	font: 600 0.9rem 'Raleway', 'Lato';
 	letter-spacing: -0.03rem;
 	color: black;
 }
+
+
+
 /* userMenu */
-.userMenu>a>form>.searchBar{ /* hidden 상태 */
-	background-color: red;
+.userMenu {
+	position: fixed;
+	right: 0;
+	top: 0;
+	display: flex;
+	justify-content: space-evenly;
+	width: 14rem;
+	padding-top: 1.5rem;
+	/* border: 1px solid red; */
+	z-index: 99;
 }
 
-.userMenu>a>form>fieldset>input#srch {
-	background-color: rgb(192, 187, 187);
-	border:none;
+
+/* user menu - 하위 A태그 3개 전부*/
+.userMenu>a {
+	flex: 1 0 auto;
+}
+
+/* form 생략 */
+
+.userMenu .search {
+	position: absolute;
+	top: 1.2rem;
+	right: 12.5rem;
+	width: 10rem;
+	line-height: 1.7rem;
+}
+
+/* 검색창 */
+/* 검색어를 입력하세요 */
+.userMenu .search input#srchBar {
+	all: unset;
+	width: 8rem;
 	outline: none;
+	background: none;
+	border-bottom: 1px solid black;
+	font-size: 13px;
+	color: #7e7e7e;
+}
+
+/* submit button - hidden */
+.userMenu .search input#srchSubmit {
+	all: unset;
+	float: right;
+	color: transparent;
 	cursor: pointer;
-	/* all:unset; */
+}
+
+
+
+.userMenu a {
+	padding-right: 1rem;
+	z-index: 111; 
+	/* submit보다 앞으로 배치 */
+}
+
+/* search & login & cart icon */
+.userMenu>a>i {
+	font-size: 1.5rem;
+}
+
+/* balloon effect */
+.userMenu>a>div {
+	position: absolute;
+	top: 3rem;
+	right:7.3rem;
+	font: 600 0.72rem 'Lato', sans-serif;
+	letter-spacing: 0.3px;
+
+	/* balloon animation */
+	animation: ball 0.7s linear 0s infinite alternate;
+	margin-top: 0;
+	-webkit-animation: ball 0.7s linear 0s infinite alternate;
+	margin-top: 0;
+}
+
+@keyframes ball {
+	0% {margin-top: 0px;}
+	100% {margin-top: 5px;}
+}
+-webkit-@keyframes ball {
+	0% {margin-top: 0px;}
+	100% {margin-top: 5px;}
 }
