@@ -1,18 +1,86 @@
-fieldset{
-    border: none;
+/* font-family: 'Raleway', sans-serif; */
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
 }
 
-.hidden{
-	overflow: hidden;
-	width: 0; height: 0; font-size: 0; line-height: 0;
-	text-indent: -9999px;
-}
 
+
+
+fieldset {
+	border: none;
+}
 
 /* 임시!!! 시멘틱태그 짜임새 확인용! */
 
 * img {
-    width: 30%;
+	width: 30%;
 }
 
 
+/* ------------------------------ */
+
+/* top & nav */
+.topWrap {
+	width: 100%;
+}
+
+.topWrap>.topLogo {
+	margin: 0 auto;
+	background-color: rgb(255, 244, 230);
+}
+
+.topWrap>.topLogo>h1 {
+	font: 3rem/5rem 'Raleway', sans-serif;
+	text-align: center;
+}
+/* leftNav */
+.leftNav {
+	width: 240px;
+	background-color: rgb(226, 218, 207);
+}
+
+.leftNav>.layoutCenter {
+	padding: 50px 40px;
+}
+
+.leftNav>.layoutCenter>.navInner {
+	/* background-color: rgb(255, 255, 255); */
+	letter-spacing: 0.5px;
+	font: bold 0.8em 'Raleway','Lato','Noto Sans KR',sans-serif;
+	
+}
+/* leftNav - inner */
+.leftNav>.layoutCenter>.navInner>ul>li::before {
+	content: "!";
+}
+.leftNav>.layoutCenter>.navInner>ul>li>a {
+	line-height: 1rem;
+	color: black;
+	background-color: aqua;
+}
+.leftNav>.layoutCenter>.navInner .menuSpacing{
+	padding: 10px 0 23px 10px;
+}
+.leftNav>.layoutCenter>.navInner>ul>li>ul>li>a {
+	line-height: 1.5rem;
+	color: black;
+}
+
+.leftNav>.layoutCenter>.navInner .menuSpacing .numSize {
+	font: 600 0.9rem 'Raleway','Lato';
+	letter-spacing: -0.03rem;
+	color: black;
+}
+/* userMenu */
+.userMenu>a>form>.searchBar{ /* hidden 상태 */
+	background-color: red;
+}
+
+.userMenu>a>form>fieldset>input#srch {
+	background-color: rgb(192, 187, 187);
+	border:none;
+	outline: none;
+	cursor: pointer;
+	/* all:unset; */
+}
