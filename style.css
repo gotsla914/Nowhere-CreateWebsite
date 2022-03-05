@@ -4,12 +4,9 @@ html {
 	box-sizing: border-box;
 }
 
-/* 임시!!! 시멘틱태그 짜임새 확인용! */
-
-* img {
-	width: 30%;
+a {
+	color: black;
 }
-
 
 /* ------------------------------ */
 
@@ -20,7 +17,7 @@ html {
 
 .topWrap>.topLogo {
 	margin: 0 auto;
-	background-color: rgb(255, 244, 230);
+	/* background-color: rgb(255, 244, 230); */
 }
 
 .topWrap>.topLogo>h1 {
@@ -35,6 +32,7 @@ html {
 }
 
 .leftNav>.layoutCenter {
+	position: fixed;
 	padding: 50px 40px;
 }
 
@@ -128,7 +126,7 @@ html {
 
 .userMenu a {
 	padding-right: 1rem;
-	z-index: 111; 
+	z-index: 111;
 	/* submit보다 앞으로 배치 */
 }
 
@@ -141,7 +139,7 @@ html {
 .userMenu>a>div {
 	position: absolute;
 	top: 3rem;
-	right:7.3rem;
+	right: 7.3rem;
 	font: 600 0.72rem 'Lato', sans-serif;
 	letter-spacing: 0.3px;
 
@@ -153,10 +151,120 @@ html {
 }
 
 @keyframes ball {
-	0% {margin-top: 0px;}
-	100% {margin-top: 5px;}
+	0% {
+		margin-top: 0px;
+	}
+
+	100% {
+		margin-top: 5px;
+	}
 }
+
 -webkit-@keyframes ball {
-	0% {margin-top: 0px;}
-	100% {margin-top: 5px;}
+	0% {
+		margin-top: 0px;
+	}
+
+	100% {
+		margin-top: 5px;
+	}
+}
+
+/* balloon effect - end */
+
+
+
+/* ------------------------- */
+/* main 1 */
+
+.mainWrap {
+	/* width: 100%; */
+	margin: 0 auto;
+}
+
+
+.mainWrap>.mainFirst {
+	height: 100%;
+	margin: 200px auto 50px;
+	display: block;
+	text-align: center;
+	width: calc(100% - 40%);
+}
+
+.mainWrap>.mainFirst>ul {
+	display: flex;
+}
+
+.mainWrap>.mainFirst>ul>li {
+	display: inline-block;
+	margin: 0 1%;
+}
+
+.mainWrap>.mainFirst>ul>li>img {
+	width: 100%;
+}
+
+
+
+/* main 2 */
+.mainWrap>.mainSecond {}
+
+.mainWrap>.mainSecond>.mainLayout {
+	width: 100%;
+	margin: 0 auto;
+	padding: 300px;
+}
+
+.mainWrap>.mainSecond>.mainLayout>.mainInner {
+	width: calc(100% - 40%);
+}
+
+
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+/* thumbnail 크기 수정용 */
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail01 {
+	display: block;
+	width: 35%;
+	padding: 5% 10% 5% 5%;
+
+}
+
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail02 {
+	display: block;
+	width: 30%;
+	padding: 15% 10% 5% 5%;
+}
+
+
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail03 {
+	display: block;
+	width: 35%;
+	padding: 5% 10% 5% 5%;
+}
+
+/* thumbnail 크기 수정용 - end */
+
+
+
+/*  */
+
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail>a {
+
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail>a>img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	filter: blur(0);
+	transition: all .1s;
 }
