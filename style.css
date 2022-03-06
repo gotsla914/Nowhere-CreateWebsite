@@ -10,6 +10,7 @@ a {
 
 /* ------------------------------ */
 
+header { }
 /* top & nav */
 .topWrap {
 	width: 100%;
@@ -18,6 +19,7 @@ a {
 .topWrap>.topLogo {
 	margin: 0 auto;
 	/* background-color: rgb(255, 244, 230); */
+	padding-top: 1rem;
 }
 
 .topWrap>.topLogo>h1 {
@@ -81,8 +83,7 @@ a {
 	display: flex;
 	justify-content: space-evenly;
 	width: 14rem;
-	padding-top: 1.5rem;
-	/* border: 1px solid red; */
+	padding-top: 2.5rem;
 	z-index: 99;
 }
 
@@ -96,7 +97,7 @@ a {
 
 .userMenu .search {
 	position: absolute;
-	top: 1.2rem;
+	top: 2.2rem;
 	right: 12.5rem;
 	width: 10rem;
 	line-height: 1.7rem;
@@ -138,7 +139,7 @@ a {
 /* balloon effect */
 .userMenu>a>div {
 	position: absolute;
-	top: 3rem;
+	top: 4rem;
 	right: 7.3rem;
 	font: 600 0.72rem 'Lato', sans-serif;
 	letter-spacing: 0.3px;
@@ -178,14 +179,13 @@ a {
 /* main 1 */
 
 .mainWrap {
-	/* width: 100%; */
 	margin: 0 auto;
 }
 
 
 .mainWrap>.mainFirst {
 	height: 100%;
-	margin: 200px auto 50px;
+	margin: 3.3rem auto 50px;
 	display: block;
 	text-align: center;
 	width: calc(100% - 40%);
@@ -207,46 +207,62 @@ a {
 
 
 /* main 2 */
-.mainWrap>.mainSecond {}
-
+.mainWrap>.mainSecond {
+	width: 100%;
+	padding-top: 15rem;
+}
+.mainSecond>h2 {
+	padding-bottom: 5rem;
+	text-align: center;
+	font: 300 2rem 'Raleway', 'Lato', 'Noto Sans KR', sans-serif;
+	letter-spacing: 5px;
+}
 .mainWrap>.mainSecond>.mainLayout {
 	width: 100%;
 	margin: 0 auto;
-	padding: 300px;
 }
-
 .mainWrap>.mainSecond>.mainLayout>.mainInner {
 	width: calc(100% - 40%);
+	margin: 0 auto;
 }
-
-
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul {
-	display: flex;
 	flex-wrap: wrap;
-	margin-left: -15px;
-	margin-right: -15px;
+	display: flex;
 }
-
-/* thumbnail 크기 수정용 */
-.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail01 {
-	display: block;
+/* thumbnail 크기 수정은 box로 */
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(1n) {
 	width: 35%;
 	padding: 5% 10% 5% 5%;
-
 }
-
-.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail02 {
-	display: block;
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(2n) {
 	width: 30%;
 	padding: 15% 10% 5% 5%;
 }
-
-
-.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail03 {
-	display: block;
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(3n) {
+	width: 30%;
+	padding: 10% 10% 5% 10%;
+}
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(4n) {
 	width: 35%;
 	padding: 5% 10% 5% 5%;
 }
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul img{
+	width: 100%;
+}
+
+
+.product .name{
+	font:600 0.9rem 'Raleway', 'Lato';
+	letter-spacing: -0.03rem;
+	color: black;
+}
+/* 옷이다 */
+
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail01 >a>img>.product>.description{
+}
+/* 하늘하늘 맥시코트 */
+
+
 
 /* thumbnail 크기 수정용 - end */
 
