@@ -10,7 +10,8 @@ a {
 
 /* ------------------------------ */
 
-header { }
+header {}
+
 /* top & nav */
 .topWrap {
 	width: 100%;
@@ -211,58 +212,101 @@ header { }
 	width: 100%;
 	padding-top: 15rem;
 }
+
 .mainSecond>h2 {
 	padding-bottom: 5rem;
 	text-align: center;
 	font: 300 2rem 'Raleway', 'Lato', 'Noto Sans KR', sans-serif;
 	letter-spacing: 5px;
 }
+
 .mainWrap>.mainSecond>.mainLayout {
 	width: 100%;
 	margin: 0 auto;
 }
+
 .mainWrap>.mainSecond>.mainLayout>.mainInner {
 	width: calc(100% - 40%);
 	margin: 0 auto;
 }
+
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul {
 	flex-wrap: wrap;
 	display: flex;
 }
+
 /* thumbnail 크기 수정은 box로 */
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(1n) {
 	width: 35%;
 	padding: 5% 10% 5% 5%;
 }
+
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(2n) {
 	width: 30%;
 	padding: 15% 10% 5% 5%;
 }
+
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(3n) {
 	width: 30%;
 	padding: 10% 10% 5% 10%;
 }
+
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(4n) {
 	width: 35%;
 	padding: 5% 10% 5% 5%;
 }
-.mainWrap>.mainSecond>.mainLayout>.mainInner>ul img{
+
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul img {
 	width: 100%;
 }
 
-
-.product .name{
-	font:600 0.9rem 'Raleway', 'Lato';
+/* 상품명 */
+.product .name {
+	/* display: block; */
+	font: 600 0.9rem 'Raleway', 'Lato';
 	letter-spacing: -0.03rem;
 	color: black;
 }
-/* 옷이다 */
 
-.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail01 >a>img>.product>.description{
+/* 상세설명 */
+.product>.description {
+	font: 400 0.8em 'Raleway', 'Lato', 'Noto Sans KR', sans-serif;
+	color: rgb(80, 38, 38)
 }
-/* 하늘하늘 맥시코트 */
 
+/* color chips */
+.color>.colorRow>.colorChips>span {
+	margin: 0.2rem 0;
+	display: inline-block;
+	width: 0.9rem;
+	height: 0.9rem;
+	border: 1.2px solid rgb(219, 219, 219);
+	border-radius: 10px;
+}
 
+.color>.colorRow>.colorChips>.white {
+	background-color: white;
+}
+
+.color>.colorRow>.colorChips>.grey {
+	background-color: rgb(219, 219, 219);
+}
+
+.color>.colorRow>.colorChips>.black {
+	background-color: black;
+}
+
+.color>.colorRow>.colorChips>.navy {
+	background-color: rgb(49, 48, 73);
+}
+
+.color>.colorRow>.colorChips>.brown {
+	background-color: rgb(80, 38, 38);
+}
+
+.color>.colorRow>.colorChips>.green {
+	background-color: #144d0c;
+}
 
 /* thumbnail 크기 수정용 - end */
 
@@ -283,4 +327,52 @@ header { }
 	height: 100%;
 	filter: blur(0);
 	transition: all .1s;
+}
+
+
+
+/* footer */
+
+footer {
+	width: 100%;
+	background-color: #ebeeeb;
+}
+
+footer>.footLayout {
+	width: 70%;
+	padding: 1rem;
+}
+
+footer>.footLayout>.footInner {
+	font: 400 0.8rem	/*'Raleway', */	'Lato', 'Noto Sans KR', sans-serif;
+	color: rgb(80, 38, 38);
+	line-height: 1rem;
+	display: flex;
+	justify-content:space-between;
+}
+
+footer>.footLayout>.footInner>.footTop {}
+
+footer>.footLayout>.footInner>.footTop>ul {}
+
+footer>.footLayout>.footInner>.footTop>ul>li {}
+
+
+
+
+
+
+
+
+/* SNS */
+
+footer>.footLayout>.footInner>.sns{ 
+	display: flex;
+	justify-content: space-around;
+	width: 7rem;
+}
+footer>.footLayout>.footInner>.sns>li {
+	display: inline;
+	font-size: 1.4rem;
+
 }
