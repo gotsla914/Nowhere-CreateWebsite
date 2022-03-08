@@ -194,6 +194,7 @@ header {}
 
 .mainWrap>.mainFirst>ul {
 	display: flex;
+	justify-content: center;
 }
 
 .mainWrap>.mainFirst>ul>li {
@@ -216,13 +217,13 @@ header {}
 .mainSecond>h2 {
 	padding-bottom: 5rem;
 	text-align: center;
-	font: 300 2rem 'Raleway', 'Lato', 'Noto Sans KR', sans-serif;
-	letter-spacing: 5px;
+	font: 400 2rem 'Raleway', 'Lato', 'Noto Sans KR', sans-serif;
+	/* letter-spacing: 5px; */
 }
 
 .mainWrap>.mainSecond>.mainLayout {
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 7rem auto;
 }
 
 .mainWrap>.mainSecond>.mainLayout>.mainInner {
@@ -235,7 +236,7 @@ header {}
 	display: flex;
 }
 
-/* thumbnail 크기 수정은 box로 */
+/* thumbnail 크기 수정 - box */
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(1n) {
 	width: 35%;
 	padding: 5% 10% 5% 5%;
@@ -243,7 +244,7 @@ header {}
 
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(2n) {
 	width: 30%;
-	padding: 15% 10% 5% 5%;
+	padding: 14% 10% 5% 5%;
 }
 
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(3n) {
@@ -253,9 +254,16 @@ header {}
 
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(4n) {
 	width: 35%;
-	padding: 5% 10% 5% 5%;
+	padding: 15% 10% 5% 5%;
 }
-
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(6n) {
+	width: 35%;
+	padding: 15% 10% 5% 5%;
+}
+.mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(7n) {
+	width: 30%;
+	padding: 10% 10% 5% 10%;
+}
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul img {
 	width: 100%;
 }
@@ -263,16 +271,23 @@ header {}
 /* 상품명 */
 .product .name {
 	/* display: block; */
-	font: 600 0.9rem 'Raleway', 'Lato';
+	font: 300 0.8em 'Noto Sans KR', Arial, Helvetica, san-serif;
+
 	letter-spacing: -0.03rem;
 	color: black;
 }
 
 /* 상세설명 */
 .product>.description {
-	font: 400 0.8em 'Raleway', 'Lato', 'Noto Sans KR', sans-serif;
-	color: rgb(80, 38, 38)
+	display: block;
+	font: 400 0.7em 'Noto Sans KR',Arial,Helvetica,san-serif;
 }
+/* 상품가격 */
+.product>.price {
+	display: block;
+	font: 400 0.7rem 'Mulish','Noto Sans KR',Arial,Helvetica,san-serif;
+}
+
 
 /* color chips */
 .color>.colorRow>.colorChips>span {
@@ -308,14 +323,10 @@ header {}
 	background-color: #144d0c;
 }
 
-/* thumbnail 크기 수정용 - end */
-
-
 
 /*  */
 
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>.thumbnail>a {
-
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -329,24 +340,32 @@ header {}
 	transition: all .1s;
 }
 
+/* thumbnail end */
+
+
+
+
+
 
 
 /* footer */
 
 footer {
 	width: 100%;
-	background-color: #ebeeeb;
+	/* background-color: #fafafa; */
+	margin-top: 20rem;
 }
 
 footer>.footLayout {
-	width: 70%;
-	padding: 1rem;
+	border-top: 0.02rem solid #dadada;
+	width: 95%;
+	padding: 1.8rem;
 }
 
 footer>.footLayout>.footInner {
-	font: 400 0.8rem	/*'Raleway', */	'Lato', 'Noto Sans KR', sans-serif;
-	color: rgb(80, 38, 38);
-	line-height: 1rem;
+	font: 400 0.75rem/1.1rem	/*'Raleway', */	'Lato', 'Noto Sans KR', sans-serif;
+	color: #969696;
+	letter-spacing: 0.02rem;
 	display: flex;
 	justify-content:space-between;
 }
@@ -359,9 +378,9 @@ footer>.footLayout>.footInner>.footTop>ul>li {}
 
 
 
-
-
-
+footer>.footLayout>.footInner>.footMiddle a{
+	color: #969696;
+}
 
 
 /* SNS */
@@ -374,5 +393,9 @@ footer>.footLayout>.footInner>.sns{
 footer>.footLayout>.footInner>.sns>li {
 	display: inline;
 	font-size: 1.4rem;
+}
 
+footer>.footLayout>.footInner>.sns>li>a>i {
+	color: #969696;
+	text-align: right;
 }
