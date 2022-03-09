@@ -47,16 +47,21 @@ header {}
 }
 
 /* leftNav - inner */
-.leftNav>.layoutCenter>.navInner>ul>li::before {
-	content: "!";
+.leftNav>.layoutCenter>.navInner>ul>li {
+	/* content: "!"; */
 	line-height: 1.5rem;
 
 }
 
+.menuSpacing {
+	background-color: yellow;
+	display: none;
+}
+
+
 .leftNav>.layoutCenter>.navInner>ul>li>a {
 	line-height: 1rem;
 	color: black;
-	background-color: aqua;
 }
 
 .leftNav>.layoutCenter>.navInner .menuSpacing {
@@ -114,6 +119,7 @@ header {}
 	border-bottom: 1px solid black;
 	font-size: 13px;
 	color: #7e7e7e;
+	display: none;
 }
 
 /* submit button - hidden */
@@ -133,10 +139,18 @@ header {}
 }
 
 /* search & login & cart icon */
+
+.userMenu>form>.search>a>i,
 .userMenu>a>i {
 	font-size: 1.5rem;
+	display: block;
 }
-
+.userMenu>form>.search>a>i{
+	position: absolute;
+	top: 0.3rem;
+	color: red;
+	right: 0;
+}
 /* balloon effect */
 .userMenu>a>div {
 	position: absolute;
@@ -256,14 +270,17 @@ header {}
 	width: 35%;
 	padding: 15% 10% 5% 5%;
 }
+
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(6n) {
 	width: 35%;
 	padding: 15% 10% 5% 5%;
 }
+
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul>li:nth-child(7n) {
 	width: 30%;
 	padding: 10% 10% 5% 10%;
 }
+
 .mainWrap>.mainSecond>.mainLayout>.mainInner>ul img {
 	width: 100%;
 }
@@ -272,20 +289,23 @@ header {}
 .product .name {
 	/* display: block; */
 	font: 300 0.8em 'Noto Sans KR', Arial, Helvetica, san-serif;
-
 	letter-spacing: -0.03rem;
 	color: black;
+	color: #7e7e7e;
 }
 
 /* 상세설명 */
 .product>.description {
 	display: block;
-	font: 400 0.7em 'Noto Sans KR',Arial,Helvetica,san-serif;
+	font: 400 0.7em 'Noto Sans KR', Arial, Helvetica, san-serif;
+	color: #7e7e7e;
 }
+
 /* 상품가격 */
 .product>.price {
 	display: block;
-	font: 400 0.7rem 'Mulish','Noto Sans KR',Arial,Helvetica,san-serif;
+	font: 400 0.7rem 'Mulish', 'Noto Sans KR', Arial, Helvetica, san-serif;
+	color: #9c9c9c;
 }
 
 
@@ -345,9 +365,6 @@ header {}
 
 
 
-
-
-
 /* footer */
 
 footer {
@@ -363,11 +380,13 @@ footer>.footLayout {
 }
 
 footer>.footLayout>.footInner {
-	font: 400 0.75rem/1.1rem	/*'Raleway', */	'Lato', 'Noto Sans KR', sans-serif;
+	font: 400 0.75rem/1.1rem
+		/*'Raleway', */
+		'Lato', 'Noto Sans KR', sans-serif;
 	color: #969696;
 	letter-spacing: 0.02rem;
 	display: flex;
-	justify-content:space-between;
+	justify-content: space-between;
 }
 
 footer>.footLayout>.footInner>.footTop {}
@@ -378,18 +397,19 @@ footer>.footLayout>.footInner>.footTop>ul>li {}
 
 
 
-footer>.footLayout>.footInner>.footMiddle a{
+footer>.footLayout>.footInner>.footMiddle a {
 	color: #969696;
 }
 
 
 /* SNS */
 
-footer>.footLayout>.footInner>.sns{ 
+footer>.footLayout>.footInner>.sns {
 	display: flex;
 	justify-content: space-around;
 	width: 7rem;
 }
+
 footer>.footLayout>.footInner>.sns>li {
 	display: inline;
 	font-size: 1.4rem;
